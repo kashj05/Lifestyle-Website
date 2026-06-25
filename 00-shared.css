@@ -1,0 +1,83 @@
+/* ============================================================
+   ObserveNow Lifestyle — SHARED STYLES
+   Include this ONCE on the page (before the section CSS files).
+   It defines fonts, colors, keyframes & reusable helpers used
+   across every section below.
+   ============================================================ */
+
+:root {
+  /* Brand palette */
+  --on-indigo:        #2a1a6e;   /* deep brand purple (oklch 0.22 0.17 295) */
+  --on-indigo-soft:   #3a2a8a;
+  --on-blue:          #2f7aa8;   /* oklch 0.45 0.14 220 */
+  --on-cream:         #f7f6f1;   /* oklch 0.97 0.01 300 */
+  --on-ink:           #1b0f3a;   /* oklch 0.18 0.08 290 */
+  --on-night:         #0e0826;   /* oklch 0.11 0.04 290 */
+
+  --on-lavender:      rgb(212, 218, 255);
+  --on-lilac:         rgb(190, 158, 255);
+  --on-pink:          rgb(224, 151, 255);
+
+  --on-radius:        24px;
+  --on-radius-lg:     28px;
+}
+
+/* Optional: pull in a nice modern font (remove if your site already loads one) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&display=swap");
+
+.on-section,
+.on-section * {
+  box-sizing: border-box;
+}
+.on-section {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.on-italic-serif {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Reusable eyebrow label */
+.on-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+.on-eyebrow .on-line {
+  width: 48px;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+/* Animations */
+@keyframes on-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes on-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes on-scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Marquee helper */
+.on-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.on-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: on-marquee 30s linear infinite;
+}
