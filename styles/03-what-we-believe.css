@@ -1,0 +1,129 @@
+/* SECTION 3 — WHAT WE BELIEVE */
+.on-believe {
+  position: relative; width: 100%; overflow: hidden;
+  padding: 60px 40px;
+  margin-top:35px ;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg,
+    var(--on-lavender) 0%,
+    var(--on-lilac) 40%,
+    var(--on-pink) 100%);
+}
+@media (min-width: 640px) { .on-believe { padding: 80px 0; } }
+
+.on-believe__blob {
+  position: absolute; pointer-events: none;
+  border-radius: 20%; opacity: 0.5; filter: blur(80px);
+}
+.on-believe__blob--a { top: 30px; left: -128px; width: 250px; height: 220px; background: var(--on-lavender); }
+.on-believe__blob--b { bottom: 30px; right: -128px; width: 2700px; height: 250px; background: var(--on-pink); }
+
+.on-believe__container { position: relative; max-width: 70rem; margin: 0 auto; padding: 0 14px; }
+.on-believe__eyebrow { color: rgba(42,26,110,0.7); }
+.on-believe__eyebrow .on-line { background: rgba(42,26,110,0.4); }
+
+.on-believe__manifesto {
+  margin-top: 10px;
+  display: grid; gap: 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 1024px) {
+  .on-believe__manifesto { grid-template-columns: 7fr 5fr; gap: 56px; }
+}
+
+.on-believe__title {
+  margin: 0; color: var(--on-indigo); font-weight: 450;
+  font-size: clamp(1.1rem, 1rem + 3vw, 2.5rem);
+  line-height: 1.05;
+}
+.on-believe__muted { color: rgba(42,26,110,0.6); font-weight: 300; }
+.on-believe__highlight { position: relative; display: inline-block; }
+.on-believe__highlight::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 4px; height: 12px;
+  background: rgba(85, 170, 200, 0.5); border-radius: 4px; z-index: 0;
+}
+.on-believe__highlight > span { position: relative; z-index: 1; }
+
+.on-believe__aside { padding-top: 8px; }
+.on-believe__aside p {
+  margin: 0; color: rgba(42,26,110,0.75);
+  font-size: 1rem; line-height: 1.65;
+}
+.on-believe__aside p em { font-style: normal; font-weight: 500; color: var(--on-indigo); }
+.on-believe__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--on-blue); }
+
+.on-believe__ticker {
+  margin-top: 12px;
+  border-top: 1px solid rgba(42,26,110,0.15);
+  border-bottom: 1px solid rgba(42,26,110,0.15);
+  padding: 5px 0;
+}
+.on-believe__ticker .on-marquee__track { gap: 40px; align-items: center; }
+.on-believe__tick {
+  display: inline-flex; align-items: center; gap: 12px; white-space: nowrap;
+  font-size: 0.875rem; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--on-indigo);
+}
+.on-believe__tick i { font-size: 1.25rem; color: rgba(42,26,110,0.4); }
+.on-believe__tick em { font-style: normal; color: rgba(42,26,110,0.3); }
+
+/* Bento */
+.on-believe__bento {
+  margin-top: 20px;
+  display: grid; gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px) { .on-believe__bento { gap: 16px; } }
+@media (min-width: 1024px) {
+  .on-believe__bento {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .on-believe__span-a { grid-column: span 3; }
+  .on-believe__span-b { grid-column: span 2; }
+  .on-believe__span-c { grid-column: span 1; grid-row: span 2; }
+  .on-believe__span-d { grid-column: span 2; }
+  .on-believe__span-e { grid-column: span 1; }
+  .on-believe__span-f { grid-column: span 2; }
+}
+
+.on-believe__card {
+  position: relative; overflow: hidden;
+  border-radius: 10px; padding: 12px;
+  background: #fff; color: var(--on-indigo);
+  border: 1px solid rgba(42,26,110,0.15);
+  transition: border-color 0.2s ease;
+}
+@media (min-width: 640px) { .on-believe__card { padding: 24px; } }
+.on-believe__card:hover { border-color: rgba(42,26,110,0.4); }
+.on-believe__card header { display: flex; align-items: flex-start; justify-content: space-between; }
+.on-believe__cnum { font-size: 1.875rem; line-height: 1; color: rgba(42,26,110,0.3); }
+.on-believe__ckey {
+  font-size: 10px; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: rgba(42,26,110,0.6);
+}
+.on-believe__card p {
+  margin: 16px 0 0;
+  font-size: 1rem; font-weight: 500; line-height: 1.35;
+}
+@media (min-width: 640px) { .on-believe__card p { font-size: 1.125rem; } }
+.on-believe__deco {
+  position: absolute; right: -24px; bottom: -24px;
+  font-size: 6rem; line-height: 1;
+  color: rgba(42,26,110,0.05);
+  transition: transform 0.5s ease;
+}
+.on-believe__card:hover .on-believe__deco { transform: translate(4px, -8px); }
+
+.on-believe__card--dark {
+  color: #fff; border-color: transparent;
+  background: linear-gradient(135deg, var(--on-indigo), var(--on-indigo-soft) 60%, var(--on-blue));
+}
+.on-believe__card--dark-alt {
+  background: linear-gradient(135deg, var(--on-blue), var(--on-indigo-soft) 60%, var(--on-indigo));
+}
+.on-believe__card--dark .on-believe__cnum { color: rgba(255,255,255,0.5); }
+.on-believe__card--dark .on-believe__ckey { color: rgba(255,255,255,0.7); }
+.on-believe__card--dark .on-believe__deco { color: rgba(255,255,255,0.1); }
